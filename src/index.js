@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
 const taskForm = document.getElementById("create-task-form");
-const ulEl = document.getElementById("tasks"); 
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault(); 
@@ -11,6 +10,8 @@ taskForm.addEventListener("submit", (e) => {
   ulEl.append(newLi); 
   formInput.value = ""; 
   })
+
+  const ulEl = document.getElementById("tasks"); 
 
   ulEl.addEventListener("click", (e) => {
     if (e.target.className == "remove-btn") {
